@@ -5,7 +5,6 @@ body {
 }
 
 #container {
-    height: 1000px;
     width: 1000px;
     margin: 0 auto;
     background: #ffffdd; /* Old browsers */
@@ -18,24 +17,42 @@ body {
 }
 article {
     padding: 15px 50px;
-    position: fixed;
 }
 article header {
     margin-left: 20px;
 }
 
-article header h1 {
+article h1 {
     margin: 0;
 }
 
-article header h3 {
+article h3 {
     font-size: 14px;
     margin: 0;
     padding: 0;
 }
 
+article h3.title {
+    margin: 0 20px
+}
+
 article p {
     margin-left: 20px;
+}
+
+article ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+article ul li span {
+    color: #2699CA;
+}
+
+article ul li span:before {
+    content: "\27A5";
+    margin:0 5px 0 40px;
 }
 
 article button {
@@ -60,6 +77,11 @@ article button:hover {background-color: #999;}
     height: 250px;
     position: relative;
     margin: 0 auto;
+}
+
+#imgContainer div {
+    height:100%;
+    width:100%;
 }
 
 #imgContainer #baseImg {

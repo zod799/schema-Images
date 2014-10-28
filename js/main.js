@@ -3,7 +3,6 @@ jQuery(function($){
         init:function(){            
             imgMan.scrollEvent();
             imgMan.startEvent();
-            imgMan.resetEvent();
         },
         startEvent:function(){
             $("#startBtn").on({
@@ -16,15 +15,17 @@ jQuery(function($){
             $("#resetBtn").on({
                 click:function(){
                     $("#img2, #img3").hide();
+                    $("#resetBtn").unbind();
                 }
             });
         },
         animateImgs:function(d){
             var $el = $('#img2');
-
-            $el.show(500);
             $({degree: 0}).animate({degree: d}, {
                 duration: 5000,
+                start: function(){
+                    $el.show(500);
+                },
                 step: function(now) {
                     $el.css({
                         transform: 'rotate(' + now + 'deg)'
@@ -32,6 +33,7 @@ jQuery(function($){
                 },
                 complete: function(){
                     $("#img3").show(500);
+                    imgMan.resetEvent();
                 }
             });
         },
@@ -55,13 +57,13 @@ jQuery(function($){
             
             if(arguments[0] == "decrease"){
                 $("#imgContainer").css({
-                    width: w-10,
-                    height: h-5
+                    width: w-15,
+                    height: h-10
                 });
             }else{
                 $("#imgContainer").css({
-                    width: w+10,
-                    height: h+5
+                    width: w+15,
+                    height: h+10
                 });
             }
         }
