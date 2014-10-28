@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Image Manipulation Project</title>
+ 
+<link rel="stylesheet" href="css/main.css" type="text/css" />
+
+</head>
+<body>
+    <div id="container">
+        <article itemscope itemtype="http://schema.org/Code">            
+            <header>
+                <h1 itemprop="headline">Image Manipulation Project</h1>
+                <h3>by <span itemprop="author">Gerard Gust</span></h3>
+            </header>
+            <p itemprop="description">This application adds multiple images onto the base image and manipulates them. Scrolling will cause the images to resize.</p>
+            <div id="imgContainer">
+                <div itemscope itemtype="http://schema.org/ImageObject">
+                    <meta itemprop="name" content="Half Dome Sunset">
+                    <meta itemprop="contentLocation" content="Yosemite, Ca">
+                    <img id="baseImg" src="images/img_base.jpg" alt="Half Dome Sunset, Yosemite" itemprop="contentUrl" />
+                </div>
+                
+                <div itemscope itemtype="http://schema.org/ImageObject">
+                    <meta itemprop="name" content="Half Dome Morning">
+                    <meta itemprop="contentLocation" content="Yosemite, Ca">
+                    <img id="img2" class="secondaryImage" src="images/img_2.jpg" alt="Half Dome Morning, Yosemite" itemprop="contentUrl" />
+                </div>
+                <div itemscope itemtype="http://schema.org/ImageObject">
+                    <meta itemprop="name" content="Invader Zim and Gir">
+                    <img id="img3" class="secondaryImage" src="images/img_3.jpg" alt="Invader Zim and Gir" itemprop="contentUrl" />
+                </div>
+            </div>
+            
+            <button type="button" id="startBtn">Start</button>
+            <button type="button" id="resetBtn">Reset</button>
+            
+            <meta itemprop="codeRepository" content="https://github.com/zod799/schema-Images">
+        </article>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+body {
+    background-color: #dc9;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    height: 1000px;
+    width: 1000px;
+    margin: 0 auto;
+    background: #ffffdd; /* Old browsers */
+    background: -moz-linear-gradient(left, #ddcc99 0%, #ffffdd 10%, #ffffdd 91%, #ddcc99 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ddcc99), color-stop(10%,#ffffdd), color-stop(91%,#ffffdd), color-stop(100%,#ddcc99)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #ddcc99 0%,#ffffdd 10%,#ffffdd 91%,#ddcc99 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #ddcc99 0%,#ffffdd 10%,#ffffdd 91%,#ddcc99 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #ddcc99 0%,#ffffdd 10%,#ffffdd 91%,#ddcc99 100%); /* IE10+ */
+    background: linear-gradient(to right, #ddcc99 0%,#ffffdd 10%,#ffffdd 91%,#ddcc99 100%); /* W3C */
+}
+article {
+    padding: 15px 50px;
+    position: fixed;
+}
+article header {
+    margin-left: 20px;
+}
+
+article header h1 {
+    margin: 0;
+}
+
+article header h3 {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+article p {
+    margin-left: 20px;
+}
+
+article button {
+    border: 1px outset #ccc;
+    padding: .5em 1.4em;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: #ddd;
+    position: relative;
+    left: 104px;
+    margin-top: 15px;
+    outline: none;
+}
+article button#resetBtn {left:120px}
+article button:hover {background-color: #999;}
+
+#imgContainer {
+    width: 600px;
+    height: 250px;
+    position: relative;
+    margin: 0 auto;
+}
+
+#imgContainer #baseImg {
+    width: 100%;
+    height: 100%;
+}
+
+#imgContainer .secondaryImage {
+    width: 50%;
+    height: 100%;
+}
+
+#imgContainer #img2 {
+    position: absolute;
+    left: 0;
+    top:0;
+    display: none;
+}
+#imgContainer #img3 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+}
