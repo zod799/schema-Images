@@ -39,12 +39,17 @@ jQuery(function($){
         },
         scrollEvent:function(){
             var lastScrollPos = 0;
+            var maxWidth = $("#imgContainer").width();
+            var minWidth = maxWidth * .5;
+
             $(window).on({
                 scroll:function(e){
                     var st= $(this).scrollTop();
-                    if(st > lastScrollPos){ //downscroll
+                    var currWidth = $("#imgContainer").width();
+                    
+                    if(st > lastScrollPos && currWidth > minWidth){ //downscroll
                         imgMan.resizeImgs.call(this,"decrease");
-                    }else{ //upscroll
+                    }else if(st < lastScrollPos && currWidth < maxWidth){ //upscroll
                         imgMan.resizeImgs.call(this,"increase");
                     }
                     lastScrollPos = st;
@@ -54,16 +59,16 @@ jQuery(function($){
         resizeImgs:function(){
             var w = $("#imgContainer").width();
             var h = $("#imgContainer").height();
-            
+
             if(arguments[0] == "decrease"){
                 $("#imgContainer").css({
                     width: w-15,
-                    height: h-10
+                    height: h-7
                 });
             }else{
                 $("#imgContainer").css({
                     width: w+15,
-                    height: h+10
+                    height: h+7
                 });
             }
         }
